@@ -16,8 +16,10 @@ Para partilhar uma pasta no Parrot OS, execute o seguinte comando:
 ```bash
 sudo net usershare add sharefolder /home/parrot/sharefolder "A secret folder shared via SMB" everyone:F guest_ok=y
 ```
-
-Quando solicitado, responda com `-I ens5`.
+Executar o responder com a interface no "ip a" 
+```bash
+responder -I ens5`.
+```
 
 #### Acessar Pasta Compartilhada no Windows 11
 
