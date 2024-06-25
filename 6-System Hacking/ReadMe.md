@@ -22,7 +22,7 @@ sudo net usershare add sharefolder /home/parrot/sharefolder "A secret folder sha
 ```
 Executar o responder com a interface no "ip a" 
 ```bash
-sudo responder -I ens5`.
+sudo responder -I ens5
 ```
 
 #### Acessar Pasta Compartilhada no Windows 11
