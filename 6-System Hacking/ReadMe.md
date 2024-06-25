@@ -9,6 +9,10 @@ Claro, vou atualizar e organizar o texto com as informações fornecidas:
 
 ### Parrot OS
 
+```bash
+mkdir /home/parrot/sharefolder
+```
+
 #### Comando para Partilhar Pasta via SMB
 
 Para partilhar uma pasta no Parrot OS, execute o seguinte comando:
