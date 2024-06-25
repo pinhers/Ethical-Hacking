@@ -55,7 +55,3 @@ Se precisar resolver problemas relacionados ao SMB, use os seguintes comandos:
     ```bash
     sudo systemctl stop smbd
     ```
-
----
-
-Se precisar de mais alguma coisa ou ajustes adicionais, estou à disposição!
