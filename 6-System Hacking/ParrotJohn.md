@@ -1,7 +1,3 @@
-Claro, vou atualizar e organizar o texto com as informações fornecidas:
-
----
-
 ### Imagens e Configurações de Instâncias
 
 - **win11 c5large 65gb**
