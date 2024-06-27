@@ -46,6 +46,7 @@ Para processar os hashes capturados, utilize o `john`:
 ```bash
 john SMB-xxxxxxxx- TAB
 ```
+![image](https://github.com/pinhers/Ethical-Hacking/assets/145346889/fbc80557-4c7f-454d-a580-ee86b84835a4)
 
 ### Troubleshooting
 
