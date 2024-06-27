@@ -28,7 +28,7 @@ Type `3` to choose Credential Harvester Attack Method.
 
 ![Credential Harvester](https://github.com/pinhers/Ethical-Hacking/assets/145346889/d8d39c58-ca0c-44fa-9106-6fa6f58d3cce)
 
-Type `2` to choose Site Cloner.
+Type `2` to choose Site Cloner or 1 Web templates and choose google
 
 ![Site Cloner](https://github.com/pinhers/Ethical-Hacking/assets/145346889/8f12128c-74a7-4b31-b6b6-9fbe8b55282d)
 
