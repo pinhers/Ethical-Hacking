@@ -46,4 +46,5 @@ The phishing website will display, and any entered username and password will sh
 
 Captured credentials will be displayed as shown below.
 
-![Captured Credentials](https://github.com/pinhers/Ethical-Hacking/assets/145346889/a192a15f-1a98-41e3-8006-34e0222f6dd1)
+![image](https://github.com/pinhers/Ethical-Hacking/assets/145346889/a4383117-e07e-4ca3-82f7-61cdfe032188)
+
