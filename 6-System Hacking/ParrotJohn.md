@@ -5,8 +5,11 @@ Retrive password using 'Responder'
 - **win11 c5large 65gb**
 - **Parrot OS c5 65gb**
 
-### Parrot OS
-
+### Parrot OS / Kali
+```bash
+sudo apt-get update
+sudo apt-get install samba
+```
 ```bash
 mkdir /home/parrot/sharefolder
 ```
