@@ -42,7 +42,7 @@ Enter the URL of the site you want to clone.
 
 The phishing website will display, and any entered username and password will show in the terminal.
 
-![Phishing Website Terminal](https://github.com/pinhers/Ethical-Hacking/assets/145346889/f1d98370-11ad-4ccd-a858-574a663c09f7)
+![image](https://github.com/pinhers/Ethical-Hacking/assets/145346889/fc187632-cab7-4a76-aa2a-df62301c40de)
 
 Captured credentials will be displayed as shown below.
 
